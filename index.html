@@ -3,43 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>TABUNGAN-PINTAR</title>
+
   <link rel="icon" href="https://yasdaronwbtc.or.id/wp-content/uploads/2025/02/cropped-MENTAHAN-LOGO-YAYASAN-revisi.png" />
+
   <style>
-    html, body {
+    * {
       margin: 0;
       padding: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #eee;
-      overflow: hidden; /* Mencegah scroll ganda */
+      box-sizing: border-box;
     }
 
-    .iframe-container {
+    body {
       width: 100%;
-      height: 100dvh; /* Menggunakan dvh agar pas di mobile browser */
-      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f1f5f9;
+      font-family: Arial, sans-serif;
     }
 
-    iframe {
-      display: block;
-      width: 100%;
-      height: 100%;
-      border: none;
+    .loading {
+      text-align: center;
+      color: #1d4ed8;
+    }
+
+    .spinner {
+      width: 45px;
+      height: 45px;
+      border: 5px solid #dbeafe;
+      border-top: 5px solid #2563eb;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: auto;
+    }
+
+    h3 {
+      margin-top: 15px;
+      font-size: 18px;
+    }
+
+    @keyframes spin {
+      100% {
+        transform: rotate(360deg);
+      }
     }
   </style>
+
+  <!-- Redirect ke Google Apps Script -->
+  <meta http-equiv="refresh" content="1;url=https://script.google.com/macros/s/AKfycbwFfuhGCjc6Z-KdKNzA0SrRP_dLw9PO9l2tc2CaRfMSPrLyv85BI1FlP4ZZyl0XxlxPXg/exec">
+
 </head>
+
 <body>
-  <div class="iframe-container">
-    <iframe
-      id="app"
-      src="https://script.google.com/macros/s/AKfycbwFfuhGCjc6Z-KdKNzA0SrRP_dLw9PO9l2tc2CaRfMSPrLyv85BI1FlP4ZZyl0XxlxPXg/exec"
-      scrolling="yes"
-      allowfullscreen="true"
-      webkitallowfullscreen="true"
-      mozallowfullscreen="true"
-      allow="fullscreen; camera; microphone; display-capture; geolocation;">
-    </iframe>
+
+  <div class="loading">
+    <div class="spinner"></div>
+    <h3>Membuka Tabungan Pintar...</h3>
   </div>
+
 </body>
 </html>
